@@ -1,10 +1,8 @@
 namespace WhoTrial.Entities
 {
-    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("Country")]
     public partial class Country
@@ -19,7 +17,7 @@ namespace WhoTrial.Entities
         public int Id_Country { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [StringLength(100)]
         public string Detail { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

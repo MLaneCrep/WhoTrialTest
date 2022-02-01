@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WhoTrial.Entities;
+using WhoTrial.Common.Models;
 using WhoTrial.Logic;
 
 namespace WhoTrial.UI
@@ -12,14 +8,17 @@ namespace WhoTrial.UI
     {
         static void Main(string[] args)
         {
-            MonthLogic monthLogic = new MonthLogic();
-
-            foreach(Month month in monthLogic.GetAll())
+           
+            IHospitalLogic hospitalLogic = new HospitalLogic();
+            foreach(HospitalModel hosp in hospitalLogic.GetAll())
             {
-                Console.WriteLine($"{month.Id_Month} - {month.Detail}");
+                Console.WriteLine($"{hosp.Id}: {hosp.Detail} -- {hosp.CountryDetail}");
             }
 
-            Console.ReadLine(); 
+            Console.WriteLine(Environment.NewLine);
+            Console.WriteLine(hospitalLogic.GetById(3).Detail);
+
+            Console.ReadKey();
         }
     }
 }

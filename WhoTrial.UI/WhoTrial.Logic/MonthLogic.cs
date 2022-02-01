@@ -1,24 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WhoTrial.Data;
+using WhoTrial.Common.Models;
 using WhoTrial.Entities;
 
 namespace WhoTrial.Logic
 {
-    public class MonthLogic
+    public class MonthLogic : BaseLogic, ISeleccionable
     {
-        private readonly IonicAppContext context;
-        public MonthLogic()
+        public SeleccionableModel GetById(int id)
         {
-            context = new IonicAppContext();   
-        }
+            Month month = context.Month.First(m => m.Id_Month == id);
 
-        public List<Month> GetAll()
+             SeleccionableModel monthModel = new SeleccionableModel
+            {
+                Id = month.Id_Month,
+                Detail = month.Detail
+            };
+            return monthModel;
+        }
+        public List<SeleccionableModel> GetAll()
         {
-            return context.Month.ToList();
+            List<SeleccionableModel> months = context.Month.Select(m => new SeleccionableModel
+            {
+                Id = m.Id_Month,
+                Detail = m.Detail
+            }).ToList();
+            return months;
         }
     }
 }

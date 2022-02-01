@@ -1,10 +1,6 @@
 namespace WhoTrial.Entities
 {
-    using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     public partial class Data_Registration
     {
@@ -16,6 +12,14 @@ namespace WhoTrial.Entities
         public int Year { get; set; }
 
         public int Id_Month { get; set; }
+
+        public int Vaginal_Birth { get; set; }
+
+        public int Cesarean_Section { get; set; }
+
+        public int SCRscompleted { get; set; }
+
+        public int RandomizedPatients { get; set; }
 
         public virtual Hospital Hospital { get; set; }
 

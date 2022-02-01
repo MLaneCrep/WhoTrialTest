@@ -58,6 +58,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WhoTrial.Common\WhoTrial.Common.csproj">
+      <Project>{4E68B8D9-1C7E-4B3A-AEAE-52152F865369}</Project>
+      <Name>WhoTrial.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WhoTrial.Entities\WhoTrial.Entities.csproj">
       <Project>{DF4C619E-8DBF-4E88-BE48-27D3E8199A9C}</Project>
       <Name>WhoTrial.Entities</Name>
