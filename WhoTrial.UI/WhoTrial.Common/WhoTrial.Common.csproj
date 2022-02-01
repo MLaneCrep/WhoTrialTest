@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{123B751D-CC69-40B4-A37F-49727FC4FA5A}</ProjectGuid>
+    <ProjectGuid>{4E68B8D9-1C7E-4B3A-AEAE-52152F865369}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WhoTrial.Logic</RootNamespace>
-    <AssemblyName>WhoTrial.Logic</AssemblyName>
+    <RootNamespace>WhoTrial.Common</RootNamespace>
+    <AssemblyName>WhoTrial.Common</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,14 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,31 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseLogic.cs" />
-    <Compile Include="CountryLogic.cs" />
-    <Compile Include="HospitalLogic.cs" />
-    <Compile Include="IHospitalLogic.cs" />
-    <Compile Include="ISeleccionable.cs" />
-    <Compile Include="MonthLogic.cs" />
+    <Compile Include="Models\HospitalModel.cs" />
+    <Compile Include="Models\SeleccionableModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WhoTrial.Common\WhoTrial.Common.csproj">
-      <Project>{4E68B8D9-1C7E-4B3A-AEAE-52152F865369}</Project>
-      <Name>WhoTrial.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WhoTrial.Data\WhoTrial.Data.csproj">
-      <Project>{2E76C5CB-7F5F-4158-B8B6-7754F121DFAB}</Project>
-      <Name>WhoTrial.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WhoTrial.Entities\WhoTrial.Entities.csproj">
-      <Project>{DF4C619E-8DBF-4E88-BE48-27D3E8199A9C}</Project>
-      <Name>WhoTrial.Entities</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

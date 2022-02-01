@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhoTrial.Entities", "WhoTri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhoTrial.Logic", "WhoTrial.Logic\WhoTrial.Logic.csproj", "{123B751D-CC69-40B4-A37F-49727FC4FA5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhoTrial.Common", "WhoTrial.Common\WhoTrial.Common.csproj", "{4E68B8D9-1C7E-4B3A-AEAE-52152F865369}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{123B751D-CC69-40B4-A37F-49727FC4FA5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{123B751D-CC69-40B4-A37F-49727FC4FA5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{123B751D-CC69-40B4-A37F-49727FC4FA5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E68B8D9-1C7E-4B3A-AEAE-52152F865369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E68B8D9-1C7E-4B3A-AEAE-52152F865369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E68B8D9-1C7E-4B3A-AEAE-52152F865369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E68B8D9-1C7E-4B3A-AEAE-52152F865369}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
