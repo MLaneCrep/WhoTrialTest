@@ -7,7 +7,6 @@ namespace WhoTrial.Logic
 {
     public class HospitalLogic : BaseLogic, IHospitalLogic
     {
-
         public HospitalModel GetById(int id)
         {
             Hospital hospital = context.Hospital.First(h => h.Id_Hospital == id);
@@ -30,7 +29,6 @@ namespace WhoTrial.Logic
                 CountryId = m.Id_Country,
                 CountryDetail = m.Country.Detail
             }).ToList();
-
             return hospitals;
         }
     }
